@@ -31,6 +31,9 @@ Note that plugin works only with geodesic geometries.
             });
     });
     ```
+    
+Note: module definition uses standard Yandex Maps API namespace 'ymaps'.
+If you are using custom namespace, you need to fork and rebuild module for your needs.
 
 ## util.calculateArea(geoObject)
 geoObject descibed using one of following formats:

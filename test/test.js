@@ -7,10 +7,10 @@ describe('util.calculateArea', function() {
 
     before(function (done) {
         ymaps.ready(['util.calculateArea']).then(function () {
-            coordinates.push(getCoordinates(coordinates[0], [1, 0], polygonSideLength));
-            coordinates.push(getCoordinates(coordinates[1], [0, 1], polygonSideLength));
-            coordinates.push(getCoordinates(coordinates[2], [-1, 0], polygonSideLength));
-            coordinates.push(getCoordinates(coordinates[3], [0, -1], polygonSideLength));
+            coordinates.push(moveToDistance(coordinates[0], [1, 0], polygonSideLength));
+            coordinates.push(moveToDistance(coordinates[1], [0, 1], polygonSideLength));
+            coordinates.push(moveToDistance(coordinates[2], [-1, 0], polygonSideLength));
+            coordinates.push(moveToDistance(coordinates[3], [0, -1], polygonSideLength));
             coordinates.push(coordinates[0]);
             done();
         })
@@ -80,8 +80,8 @@ describe('util.calculateArea', function() {
         expect(area).to.be.eql(Math.PI * Math.pow(200, 2));
     });
 
-    function getCoordinates(basePoint, direction, polygonSideLength) {
-        return ymaps.coordSystem.geo.solveDirectProblem(basePoint, direction, polygonSideLength).endPoint;
+    function moveToDistance(basePoint, direction, distance) {
+        return ymaps.coordSystem.geo.solveDirectProblem(basePoint, direction, distance).endPoint;
     }
 
     function getRelativeErrorPercent(result, standard) {

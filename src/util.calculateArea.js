@@ -1,4 +1,5 @@
 ymaps.modules.define('util.calculateArea', [], function (provide) {
+    // Equatorial radius of Earth
     var RADIUS = 6378137;
 
     function calculateArea(feature) {
@@ -67,6 +68,7 @@ ymaps.modules.define('util.calculateArea', [], function (provide) {
     }
 
     /**
+     * Modified version of https://github.com/mapbox/geojson-area
      * Calculate the approximate area of the polygon were it projected onto
      *     the earth.  Note that this area will be positive if ring is oriented
      *     clockwise, otherwise it will be negative.
@@ -74,10 +76,10 @@ ymaps.modules.define('util.calculateArea', [], function (provide) {
      * Reference:
      * Robert. G. Chamberlain and William H. Duquette, "Some Algorithms for
      *     Polygons on a Sphere", JPL Publication 07-03, Jet Propulsion
-     *     Laboratory, Pasadena, CA, June 2007 http://trs-new.jpl.nasa.gov/dspace/handle/2014/40409
+     *     Laboratory, Pasadena, CA, June 2007 https://trs.jpl.nasa.gov/handle/2014/40409
      *
      * Returns:
-     * {float} The approximate signed geodesic area of the polygon in square
+     * {Number} The approximate signed geodesic area of the polygon in square
      *     meters.
      */
 
