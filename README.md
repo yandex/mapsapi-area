@@ -16,7 +16,7 @@ Note that plugin works only with geodesic geometries.
 
 3. Wait for both API and module loaded
     ```js
-    ymaps.ready(['util.caclulateArea']).then(function () {
+    ymaps.ready(['util.calculateArea']).then(function () {
         var myPolygon = new ymaps.Polygon(someCoordinates);
         // You can calculate area of any type of ymaps.GeoObject.
         var area = ymaps.util.calculateArea(myPolygon);
