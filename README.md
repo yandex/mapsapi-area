@@ -5,16 +5,14 @@ Note that plugin works only with geodesic geometries.
 
 ## Usage
 
-1. Put module source code ([util.calculateArea.min.js](https://github.com/yandex/mapsapi-area/blob/master/build/util.calculateArea.min.js)) on your CDN.
-
-2. Load both [Yandex Maps JS API 2.1](http://api.yandex.com/maps/doc/jsapi/) and module source code by adding following code into &lt;head&gt; section of your page
+1. Load both [Yandex Maps JS API 2.1](http://api.yandex.com/maps/doc/jsapi/) and module source code by adding following code into &lt;head&gt; section of your page
     ```html
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <!-- Change my.cdn.tld to your CDN host name -->
-    <script src="http://my.cdn.tld/util.calculateArea.min.js" type="text/javascript"></script>
+    <script src="https://yastatic.net/s3/mapsapi-jslibs/area/0.0.1/util.calculateArea.min.js" type="text/javascript"></script>
     ```
 
-3. Wait for both API and module loaded
+2. Wait for both API and module loaded
     ```js
     ymaps.ready(['util.calculateArea']).then(function () {
         var myPolygon = new ymaps.Polygon(someCoordinates);
