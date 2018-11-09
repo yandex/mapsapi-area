@@ -5,7 +5,7 @@ Note that plugin works only with geodesic geometries.
 
 ## Usage
 
-1. Load both [Yandex Maps JS API 2.1](http://api.yandex.com/maps/doc/jsapi/) and module source code by adding following code into &lt;head&gt; section of your page
+1. Load both [Yandex Maps JS API 2.1](https://tech.yandex.com/maps/doc/jsapi/2.1/quick-start/index-docpage/) and module source code by adding following code into &lt;head&gt; section of your page
     ```html
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <!-- Change my.cdn.tld to your CDN host name -->
