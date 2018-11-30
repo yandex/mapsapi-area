@@ -29,7 +29,7 @@ Note that plugin works only with geodesic geometries.
             });
     });
     ```
-    
+
 Note: module definition uses standard Yandex Maps API namespace 'ymaps'.
 If you are using custom namespace, you need to fork and rebuild module for your needs.
 
@@ -56,3 +56,9 @@ If you want to make a pull-request, run tests and check code style first.
     npm run-script lint
     npm test
     ```
+
+## Third party components
+
+The views and conclusions contained in the software and documentation are those
+of the authors and should not be interpreted as representing official policies,
+either expressed or implied, of OpenLayers Contributors.
